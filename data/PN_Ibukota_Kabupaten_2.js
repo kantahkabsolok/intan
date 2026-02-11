@@ -1,0 +1,1 @@
+var json_PN_Ibukota_Kabupaten_2 = {"type":"FeatureCollection","name":"PN_Ibukota_Kabupaten_2","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"NAMOBJ":"Kantor Bupati Solok"},"geometry":{"type":"Point","coordinates":[100.620499,-0.951509]}}]}
