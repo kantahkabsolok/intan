@@ -59,9 +59,9 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-1.2194044146719638,100.16068239892422],[-0.5105007555626958,101.4787121306166]]);
+        })
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://kab-solok.atrbpn.go.id">Seksi Pengadaan Tanah dan Pengembangan Kantor Pertanahan Kab. Solok</a>');
+        map.attributionControl.setPrefix('<a href="https://kab-solok.atrbpn.go.id">Seksi Pengadaan Tanah dan Pengembangan<br />Kantor Pertanahan Kabupaten Solok</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         // remove popup's row if "visible-with-data"
         function removeEmptyRowsFromPopupContent(content, feature) {
@@ -155,6 +155,9 @@
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
             map.setMaxBounds(map.getBounds());
             map.setMinZoom(map.getZoom());
         }
