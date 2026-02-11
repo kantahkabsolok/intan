@@ -1,6 +1,6 @@
 
         #map {
-            background-color: #ffffff
+            background-color: #96e99a
         }
         html, body, #map {
 			overflow: hidden;
@@ -194,4 +194,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+            display: none;
         }
